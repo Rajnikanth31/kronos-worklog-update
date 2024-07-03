@@ -27,14 +27,14 @@ jobs:
           KRONOS_PASSWORD: ${{ secrets.KRONOS_PASSWORD }}
           KRONOS_DOMAIN: ${{ secrets.KRONOS_DOMAIN }}
 
-      - name: PingMe On Pushbullet
-        uses: kha7iq/pingme-action@v1
-        with:
-          service: pushbullet
-        env:
-          PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
-          PUSHBULLET_DEVICE: ${{ secrets.PUSHBULLET_DEVICE }}
-          PUSHBULLET_TITLE: "Kronos Worklog Updated"
-          PUSHBULLET_MESSAGE: |
-            Event is triggered by ${{ github.event_name }}
-            Workflow Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      # - name: PingMe On Pushbullet
+      #   uses: kha7iq/pingme-action@v1
+      #   with:
+      #     service: pushbullet
+      #   env:
+      #     PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
+      #     PUSHBULLET_DEVICE: ${{ secrets.PUSHBULLET_DEVICE }}
+      #     PUSHBULLET_TITLE: "Kronos Worklog Updated"
+      #     PUSHBULLET_MESSAGE: |
+      #       Event is triggered by ${{ github.event_name }}
+      #       Workflow Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
